@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Top Questions [Featured]</h1>
+    <div class="row" *ngFor="let items of data">
+        <div class="col-sm-1" style="padding: 2px;">
+            <div class="tag-gray">
+                {{items.score}}
+                <br>
+                Vote
+            </div>
+        </div>
+        <div class="col-sm-1" style="padding: 2px;">
+            <div class="tag-green">
+                {{items.answer_count}}
+                <br>
+                Answer
+            </div>
+
+        </div>
+        <div class="col-sm-1" style="padding: 2px;">
+            <div class="tag-white">
+                {{items.view_count}}
+                <br>
+                Views
+            </div>
+
+        </div>
+        <div class="col-sm-9">
+            <span class="blue-tag">+{{items.bounty_amount}}</span> &nbsp; <span><a class="url" href="{{items.link}}"
+                    target="_blank">{{items.title}}</a></span><br>
+            <ng-container *ngFor="let tag of items.tags">
+                <span class="skyblue-tag">{{tag}}</span>
+            </ng-container>
+            <span class="modifiedBy">modified {{items.last_edit_date | date: 'MMM d' }} at {{items.last_edit_date |
+                date: 'h:mm' }}
+                <a (click)="goToUserProfile(items)">{{items.owner.display_name}}</a>
+                {{items.owner.reputation}} </span>
+        </div>
+    </div>
+</div>

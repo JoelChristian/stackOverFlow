@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="profile">
+                Profile
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="activity">
+                Activity
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="profile-image">
+                <img src="{{data.profile_image}}" alt="User Profile Pic" width="200" height="200">
+                <br>
+                <div class="reputation">
+                    <label>{{data.reputation}}</label> Reputation
+                </div>
+                <span> </span>
+                <br>
+                <span class="yellow-tag">{{data.badge_counts.gold}}</span>
+                <span class="silver-tag">{{data.badge_counts.silver}}</span>
+                <span class="bronze-tag">{{data.badge_counts.bronze}}</span>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h3 class="name">{{data.display_name}}</h3>
+            <h3></h3>
+            <h3 class="website" *ngIf="data.website_url">
+                <a href="{{data.website_url}}">{{data.display_name}}</a>
+            </h3>
+            <h3 class="website" *ngIf="!data.website_url">
+                Website doesn't exist
+            </h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row" *ngFor="let tag of tags">
+        <div class="col-md-4">
+            <div class="skyblu-big-tag">
+                {{tag.name}}
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <div class="score">
+                Score: {{tag.count}}
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <h3>Top Questions</h3>
+    <div class="row" *ngFor="let items of questions">
+        <div class="col-sm-1" style="padding: 2px;">
+            <div class="tag-gray">
+                {{items.score}}
+                <br>
+                Vote
+            </div>
+        </div>
+        <div class="col-sm-1" style="padding: 2px;">
+            <div class="tag-green">
+                {{items.answer_count}}
+                <br>
+                Answer
+            </div>
+
+        </div>
+        <div class="col-sm-1" style="padding: 2px;">
+            <div class="tag-white">
+                {{items.view_count}}
+                <br>
+                Views
+            </div>
+
+        </div>
+        <div class="col-sm-9">
+            <span><a class="url" href="{{items.link}}">{{items.title}}</a></span><br>
+            <ng-container *ngFor="let tag of items.tags">
+                <span class="skyblue-tag">{{tag}}</span>
+            </ng-container>
+            <span *ngIf="items.last_edit_date" class="modifiedBy">modified {{items.last_edit_date | date: 'MMM d' }} at
+                {{items.last_edit_date |
+                date: 'h:mm' }}</span>
+        </div>
+    </div>
+
+
+</div>

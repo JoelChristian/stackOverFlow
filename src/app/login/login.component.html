@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="form-container">
+        <form [formGroup]="login" (ngSubmit)="onFormSubmit()">
+            <h1>Login</h1>
+
+            <mat-form-field>
+                <input matInput type="email"
+                    [class.is-invalid]="login.get('email').invalid && login.get('email').touched" placeholder="Email"
+                    formControlName="email" required />
+            </mat-form-field>
+            <div *ngIf="(login.get('email').invalid && login.get('email').touched) || login.get('email').dirty">
+                <small class="text-danger" *ngIf="login.get('email').errors?.required">Email address is required</small>
+                <small class="text-danger" *ngIf="login.get('email').errors?.email">Email address is invalid</small>
+            </div>
+            <br><br>
+
+            <mat-form-field>
+                <input matInput type="password"
+                    [class.is-invalid]="login.get('password').invalid && login.get('password').touched"
+                    placeholder="Password" formControlName="password" required />
+            </mat-form-field>
+            <div *ngIf="( login.get('email').invalid && login.get('password').touched) || login.get('password').dirty">
+                <small class="text-danger" *ngIf="login.get('password').errors?.required">Password is required</small>
+                <small class="text-danger" *ngIf="login.get('password').errors?.minlength">Password must contain 6
+                    characters </small>
+            </div>
+            <br><br>
+            <div class="incorrect-password" *ngIf="incorrect">Invalid Username or Password <br><br></div>
+
+            <button type="submit" mat-raised-button color="primary">
+                Submit
+            </button>
+        </form>
+    </div>
+
+</div>

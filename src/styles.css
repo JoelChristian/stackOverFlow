@@ -1,1 +1,150 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.tag-gray{
+    background-color: #e8e6e6;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.tag-green{
+    background-color: #3dbf7d;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #ffffff;
+}
+.tag-white{
+    background-color:#ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid #adadad;
+}
+
+.blue-tag{
+    background-color:#189fef;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #ffffff;
+}
+.skyblue-tag{
+    background-color: #d7f6ff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin: 1px;
+    vertical-align: sub;
+}
+.url{
+    color: #189fef;
+    font-size: 17px;
+    font-weight: 100;
+}
+.modifiedBy{
+    color: #adadad;
+    float: right;
+    font-size: 12px;    
+}
+.profile{
+    color: #ffffff;
+    background: #f3ab3f;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 30px;
+    margin: 10px;
+}
+.activity{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+}
+.profile-image{
+    padding: 25px 10px;
+    background-color: #dedede;
+    text-align: center;
+    border-radius: 5px;
+}
+.reputation{
+    padding: 20px 0px;
+    color: #adadad;
+}
+.reputation label{
+    font-size: 20px;
+    color: #000000;
+}
+.yellow-tag{
+    background-color: #fbc736;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px;
+}
+.silver-tag{
+    background-color: #adaba6;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px;
+}.bronze-tag{
+    background-color: #ffa981;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px;
+}
+h3.name{
+    font-size: 40px;
+    font-weight: 500;
+}
+h3.website{
+    font-size: 30px;
+    font-weight: 500;
+}
+.skyblu-big-tag{
+    background-color: #c1f1ff;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 3px;
+    font-size: 18px;
+    margin: 1px;
+    color: #006a7b;
+}
+.score{
+    text-align: center;
+    font-size: 15px;
+}
+.form-container{
+    padding: 100px 200px;
+    text-align: center;
+}
+form{
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    padding: 20px 0px;
+    background: #fdfdda;
+}
+form h1{
+    font-size: 40px;
+    font-weight: 100;
+}
+.incorrect-password{
+    color: red;
+    font-size: 15px;
+}
