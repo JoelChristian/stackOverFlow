@@ -7,6 +7,9 @@ import { UserProfilePageComponent } from './user-profile-page/user-profile-page.
 
 const routes: Routes = [
   {
+    path: '', redirectTo: 'login', pathMatch: 'full'
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
